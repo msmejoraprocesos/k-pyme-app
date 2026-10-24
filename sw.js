@@ -1,5 +1,5 @@
 // Service worker de K-Pyme (app web): permite instalarla y abrirla aunque falle la conexión.
-const CACHE = 'kpyme-v1';
+const CACHE = 'kpyme-v2';
 self.addEventListener('install', (e) => {
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './manifest.json', './icono-192.png'])).catch(() => {}));
